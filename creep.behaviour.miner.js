@@ -29,7 +29,7 @@ mod.run = function(creep, params = {approach: mod.approach}) {
     }
 
     if( source ) {
-        if( !creep.action ) Population.registerAction(creep, Creep.action.harvesting, source);
+        if( !creep.action ) Creep.action.harvesting.assign(creep, source);
         if( !creep.data.determinatedSpot ) {
             let args = {
                 spots: [{
